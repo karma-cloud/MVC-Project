@@ -1,0 +1,13 @@
+[ {
+  "name" : "tort",
+  "category" : {
+    "nameCategory" : "desert"
+  },
+  "price" : 150.0
+}, {
+  "name" : "tortik",
+  "category" : {
+    "nameCategory" : "desert"
+  },
+  "price" : 150.0
+} ]
