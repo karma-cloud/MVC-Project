@@ -13,8 +13,8 @@ public class Main {
         //Лист блюд
         List<Model.Dish> dishes = List.of(dish1,dish2,dish3);
         //Сериализация  десериализация
-        Model.Serialize.serialize(dishes,file);
-        System.out.println(Model.Serialize.deserialize(file));*/
+        Controller.Serialize.serialize(dishes,file);
+        System.out.println(Controller.Serialize.deserialize(file));*/
 
         View.mainMenu();
 

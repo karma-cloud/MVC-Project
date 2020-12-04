@@ -3,7 +3,7 @@ package View;
 import Controller.Controller;
 import Model.Category;
 import Model.Dish;
-import Model.Serialize;
+import Controller.Serialize;
 
 import java.io.File;
 import java.io.IOException;
