@@ -1,3 +1,5 @@
+package Model;
+
 /**
  * Класс - модель блюд со свойствами <b>name</b>, <b>category</b>,</b> и <b>price</b>.
  */
@@ -72,7 +74,7 @@ public class Dish {
      */
     @Override
     public String toString() {
-        return "Dish{ " + "name: " + name  + ", category: " + category + ", price: " + price + '}';
+        return "Model.Dish{ " + "name: " + name  + ", category: " + category + ", price: " + price + '}';
     }
 
 }

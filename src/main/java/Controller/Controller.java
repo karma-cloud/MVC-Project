@@ -1,4 +1,9 @@
-import com.fasterxml.jackson.databind.ObjectMapper;
+package Controller;
+
+import Model.Category;
+import Model.Dish;
+import Model.Serialize;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -16,7 +21,7 @@ public class Controller {
      */
     public static void setDataByNumber(int i,Dish dish,File file){
         try {
-            List<Dish> dishes=Serialize.deserialize(file);
+            List<Dish> dishes= Serialize.deserialize(file);
             dishes.set(i,dish);
             Serialize.serialize(dishes,file);
         } catch (IOException e) {
@@ -32,7 +37,7 @@ public class Controller {
      */
     public static void setDataByName(String name,Dish dish,File file){
         try {
-            List<Dish> dishes=Serialize.deserialize(file);
+            List<Dish> dishes= Serialize.deserialize(file);
             int i=0;
             while(i<dishes.size()){
                 if(dishes.get(i).getName().equals(name)){
@@ -53,9 +58,9 @@ public class Controller {
      * @param file - файл
      * @throws IOException
      */
-    public static void setCategoryByName(String name,Category category,File file){
+    public static void setCategoryByName(String name, Category category, File file){
         try {
-            List<Dish> dishes=Serialize.deserialize(file);
+            List<Dish> dishes= Serialize.deserialize(file);
             Dish dish = new Dish(name,category,0);
             int i=0;
             while(i<dishes.size()){
@@ -79,7 +84,7 @@ public class Controller {
      */
     public static void setPriceByName(String name,Double price,File file){
         try {
-            List<Dish> dishes=Serialize.deserialize(file);
+            List<Dish> dishes= Serialize.deserialize(file);
             int i=0;
             while(i<dishes.size()){
                 if(dishes.get(i).getName().equals(name)){
@@ -121,7 +126,7 @@ public class Controller {
      */
     public static void deleteData(String name, File file) {
         try {
-            List<Dish> dishes=Serialize.deserialize(file);
+            List<Dish> dishes= Serialize.deserialize(file);
             int i=0;
             while(i<dishes.size()){
                 if(dishes.get(i).getName().equals(name)){
@@ -143,7 +148,7 @@ public class Controller {
      */
     public static String print(File file){
         try {
-            String s=Serialize.deserialize(file).toString();
+            String s= Serialize.deserialize(file).toString();
             String s1="";
             char[] t=s.toCharArray();
             for(int i=1;i<s.length()-1;i++){

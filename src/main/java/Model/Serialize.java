@@ -1,6 +1,7 @@
-import com.fasterxml.jackson.core.JsonProcessingException;
+package Model;
+
+import Model.Dish;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.json.JSONObject;
 
 import java.io.*;
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
  */
 public class Serialize {
 
-    /*public static void serialize(Dish dish,File file) throws IOException {
+    /*public static void serialize(Model.Dish dish,File file) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(file, dish);
     }*/
@@ -24,9 +25,9 @@ public class Serialize {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(file, dishes);
     }
-    /*public static Dish deserialize(File file) throws IOException {
+    /*public static Model.Dish deserialize(File file) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        Dish dish = mapper.readValue(file, Dish.class);
+        Model.Dish dish = mapper.readValue(file, Model.Dish.class);
         System.out.println(dish);
         return dish;
     }*/

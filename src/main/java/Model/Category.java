@@ -1,3 +1,5 @@
+package Model;
+
 /** Класс модель - категорий блюд со свойством <b>name</b>.
  */
 public class Category {
@@ -36,7 +38,7 @@ public class Category {
      */
     @Override
     public String toString() {
-        return "Category{" + "nameCategory: " + nameCategory + '}';
+        return "Model.Category{" + "nameCategory: " + nameCategory + '}';
     }
 
 
